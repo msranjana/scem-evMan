@@ -24,7 +24,7 @@ router.post('/run',requireAuth(options),async(req,res)=>{
     return res.status(200).json({compilation : "success",stdout: rj.run.stdout})
 })
 
-router.post('/submit',async(req,res)=>{
+router.post('/submit',requireAuth(),async(req,res)=>{
     const {lang,ver,inp,code}=req.body;
     const rs=await fetch(process.env.cmpAPI,{
         method: "POST",
