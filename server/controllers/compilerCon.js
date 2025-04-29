@@ -11,7 +11,7 @@ const testCode=(real,cur)=>{
     return {res: res,msg: (res)? "all testcases passed": "Wrong answer",correct: crct,wrong: wr};
 }
 
-const getAns=async(uid)=>{
+const getAns=async(qid)=>{
     //todo: fetch expected answer from DB
     return "dum1\n\dum2\ndum3";
 }
